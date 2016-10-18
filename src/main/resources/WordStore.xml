@@ -2,13 +2,17 @@
 <words>
     <word>
         <id>1</id>
-        <english>car</english>
-        <russian>mashina</russian>
+        <targetWord>mashina</targetWord>
+        <targetLenguage>russian</targetLenguage>
+        <sourceWord>car</sourceWord>
+        <sourceLenguage>english</sourceLenguage>
     </word>
     <word>
-        <id>2</id>
-        <english>man</english>
-        <russian>mushina</russian>
+        <id>3</id>
+        <targetWord>djava</targetWord>
+        <targetLenguage>russian</targetLenguage>
+        <sourceWord>java</sourceWord>
+        <sourceLenguage>english</sourceLenguage>
     </word>
 </words>
 
