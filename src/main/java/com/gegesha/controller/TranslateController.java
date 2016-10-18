@@ -9,6 +9,8 @@ package com.gegesha.controller;
  *
  * @author tornike
  */
+import com.gegesha.dao.TranslateServiceDao;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,9 +24,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api")
 public class TranslateController {
+    
+    @Autowired
+    TranslateServiceDao dao;
+    
     @RequestMapping(value = "/getWord", method = RequestMethod.GET, produces = {"text/xml"})
     public @ResponseBody String getWord(@RequestParam String word,@RequestParam String source,@RequestParam String target) throws Exception {
-      return word+"//"+source+"//"+target;
+        System.out.println("controler//////////////////////////////////////");
+      dao.getWord(word, source, target);
+      return null;
     }
     
 }

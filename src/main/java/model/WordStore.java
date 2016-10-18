@@ -13,9 +13,21 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * @author tornike
  */
+
+@XmlRootElement(name="words")
 public class WordStore {
     
-    @XmlElement(name="Words")
-    private List<Word> words;
+    
+    private List words;
+
+    public List<Word> getWords() {
+        return words;
+    } 
+    @XmlElement(name = "word")
+    public void setWords(List<Word> words) {
+        this.words = words;
+    }
+    
+    
     
 }

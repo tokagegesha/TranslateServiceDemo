@@ -12,49 +12,36 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * @author tornike
  */
-@XmlRootElement(name = "Word")
+@XmlRootElement(name = "word")
 public class Word {
     
-    @XmlElement(name = "id")
     private int id;    
+    private String english;
+    private String russian;
+
+    public String getEnglish() {
+        return english;
+    }
     
-    @XmlElement(name = "originalLanguage")
-    private String originalLanguage;
+    @XmlElement(name = "english")
+    public void setEnglish(String english) {
+        this.english = english;
+    }
+
+    public String getRussian() {
+        return russian;
+    }
     
-    @XmlElement(name = "targetLanguage")
-    private String targetLanguage;
-    
-    @XmlElement(name = "sourceLanguage")
-    private String sourceLanguage;
-
-    public String getOriginalLanguage() {
-        return originalLanguage;
-    }
-
-    public void setOriginalLanguage(String originalLanguage) {
-        this.originalLanguage = originalLanguage;
-    }
-
-    public String getTargetLanguage() {
-        return targetLanguage;
-    }
-
-    public void setTargetLanguage(String targetLanguage) {
-        this.targetLanguage = targetLanguage;
-    }
-
-    public String getSourceLanguage() {
-        return sourceLanguage;
-    }
-
-    public void setSourceLanguage(String sourceLanguage) {
-        this.sourceLanguage = sourceLanguage;
+    @XmlElement(name = "russian")
+    public void setRussian(String russian) {
+        this.russian = russian;
     }
 
     public int getId() {
         return id;
     }
-
+    
+    @XmlElement(name = "id")
     public void setId(int id) {
         this.id = id;
     }
