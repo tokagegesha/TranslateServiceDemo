@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package com.gegesha.model;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -15,13 +15,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "word")
 public class Word {
     
-    private int id;    
+    private String id;    
     private String targetLenguage;
     private String sourceLenguage;
     private String targetWord;
     private String sourceWord;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
@@ -61,7 +61,7 @@ public class Word {
     }
     
     @XmlElement(name = "id")
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
     
